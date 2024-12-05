@@ -31,7 +31,7 @@
 
 .category_container {
     position: relative;
-    margin-top: -20%;
+    margin-top: -10%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     max-width: 1600px;
