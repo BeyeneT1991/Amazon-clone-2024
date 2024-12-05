@@ -1,0 +1,17 @@
+.products_container {
+    display: flex;
+    /* Enables Flexbox */
+    flex-wrap: wrap;
+    /* Allows items to wrap to the next row if necessary */
+    gap: 50px;
+    /* Creates space between items */
+    justify-content: center;
+    /* Centers items horizontally */
+    margin: 100px auto;
+    /* Keeps the margin as defined */
+}
+
+.products_container section {
+    margin: 0 auto;
+    /* Centers each section horizontally if needed */
+}
