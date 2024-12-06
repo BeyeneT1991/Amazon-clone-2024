@@ -12,8 +12,8 @@ import Orders from './Pages/Order/Orders';
 import Cart from './Pages/Cart/Cart';
 import Results from './Pages/Results/Results';
 import ProductDetail from './Pages/ProductDetail/ProductDetail';
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 
 const stripePromise = loadStripe('pk_test_51QPnHVGOygBTVCbizCj9vOUKGV5Web5FFL2ewWRorxKwenGFUJ2CJkEY8Uf0YPyJVzWY7NPR9LFTK5dePs6wufMV00oviZh6Tk');

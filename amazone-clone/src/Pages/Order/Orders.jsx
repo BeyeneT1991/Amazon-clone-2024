@@ -11,6 +11,12 @@ function Orders() {
   
   useEffect(() => {
     if (user) {
+
+      // dispatch({
+      //   type: "LOG_ACTIVITY",
+      //   payload: "User viewed their orders",
+      // });
+      
       db.collection("users")
         .doc(user.uid)
         .collection("orders")
@@ -27,7 +33,7 @@ function Orders() {
     } else {
       setOrders([]); // Reset orders if the user is not logged in
     }
-  }, []);
+  }, [user, dispatch]);
     
   return (
     <LayOut>

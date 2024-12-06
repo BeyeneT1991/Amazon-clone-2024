@@ -2,14 +2,14 @@ import React, { useContext } from 'react';
 import Rating from '@mui/material/Rating';
 import CurrencyFormat from '../CurrencyFormat/CurrencyFormat';
 import classes from './product.module.css';
-import { Link } from 'react-router-dom'; // Fixed Link import
+import { Link } from 'react-router-dom'; 
 import { DataContext } from '../DataProvider/DataProvider';
 import { Type } from '../../Utility/actiontype';
 
 function ProductCard({ product = {}, flex, renderDesc, renderAdd }) {
     // Destructure product with fallback values
     const { image, title, id, rating = {}, price, description } = product;
-    const { rate = 0, count = 0 } = rating; // Default rating structure
+    const { rate = 0, count = 0 } = rating; 
 
     const [state, dispatch] = useContext(DataContext);
 
@@ -47,7 +47,7 @@ function ProductCard({ product = {}, flex, renderDesc, renderAdd }) {
                 {/* Render "add to cart" button if renderAdd is true */}
                 {renderAdd && (
                     <button className={classes.button} onClick={addToCart}>
-                        Add to Cart
+                    Add to Cart
                     </button>
                 )}
             </div>

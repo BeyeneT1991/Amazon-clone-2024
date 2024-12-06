@@ -4,15 +4,14 @@ import { DataContext } from '../DataProvider/DataProvider';
 
 const ProtectedRoute = ({ children, msg, redirect = "/auth" }) => {
   const navigate = useNavigate();
-  const [{ user }] = useContext(DataContext); // Removed 'dispatch' since it's not used
-
+  const [{ user, dispatch }] = useContext(DataContext); 
   useEffect(() => {
     if (!user) {
-      navigate(redirect, { state: { msg } }); // Fixed navigate state syntax
+      navigate("auth", { state: { msg } }); 
     }
-  }, [user, navigate, redirect, msg]); // Added all dependencies to the dependency array
+  }, [user, navigate, redirect, msg]); 
 
-  // Render children if the user is authenticated
+  // Payment -----> /auth (/)
   return user ? children : null;
 };
 
