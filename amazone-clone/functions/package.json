@@ -21,7 +21,8 @@
     "stripe": "^17.4.0"
   },
   "devDependencies": {
-    "firebase-functions-test": "^3.1.0"
+    "firebase-functions-test": "^3.1.0",
+    "github-pages": "^3.0.2"
   },
   "private": true
 }
