@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 const app = express()
-
+const { setGlobalOptions } = require("firebase-functions/v2");
 
 setGlobalOptions({ maxInstances: 10 });
 
@@ -29,7 +29,7 @@ app.post("/payment/create", async (req, res) => {
             currency: "usd"
         });
         res.status(201).json({
-            clientSecret: paymentIntent.clien_secret,
+            clientSecret: paymentIntent.client_secret,
         });
         
     } else {

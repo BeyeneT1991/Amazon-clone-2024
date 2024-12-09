@@ -5,7 +5,7 @@ export const initialState = {
     user:null
 };
 
-export const reducer = (state = initialState, action) => { // Default `state` value added
+export const reducer = (state, action) => { // Default `state` value added
     switch (action.type) {
         case Type.ADD_TO_BASKET:
             //* check if the item exists
