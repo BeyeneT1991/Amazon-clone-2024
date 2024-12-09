@@ -84,11 +84,12 @@ function Orders() {
 
   useEffect(() => {
     if (user) {
-      db.collection("users") // Ensure collection name is 'users'
+      db.collection("user") // Ensure collection name is 'users'
         .doc(user.uid)
-        .collection("orders")
+        .collection("order")
         .orderBy("created", "desc")
         .onSnapshot((snapshot) => {
+          console.log(snapshot)
           setOrders(
             snapshot.docs.map((doc) => ({
               id: doc.id,
