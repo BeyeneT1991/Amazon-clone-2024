@@ -84,12 +84,6 @@ function Orders() {
 
   useEffect(() => {
     if (user) {
-      // Uncomment and use if logging activity is required
-      // dispatch({
-      //   type: "LOG_ACTIVITY",
-      //   payload: "User viewed their orders",
-      // });
-
       db.collection("users") // Ensure collection name is 'users'
         .doc(user.uid)
         .collection("orders")
